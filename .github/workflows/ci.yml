@@ -1,0 +1,22 @@
+name: CI - To-Do List Static Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Check for index.html
+      run: |
+        if [ ! -f "index.html" ]; then
+          echo "Brak pliku index.html"
+          exit 1
+        fi
