@@ -1,0 +1,33 @@
+.section {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.section--tasksList {
+    margin-bottom: 4px;
+}
+
+.section__header {
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 4px solid #eee;
+    padding: 20px;
+}
+
+.section__header--grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__header--listHeader {
+    border-bottom: none;
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .section__header--grid {
+        grid-template-columns: 1fr;
+    }
+}
